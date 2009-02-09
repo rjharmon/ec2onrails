@@ -18,6 +18,11 @@ God.watch do |w|
       c.mount_point = "/mnt"
       c.above = 75
     end 
+
+    on.condition(:disk_usage) do |c| 
+      c.mount_point = "/var/local"
+      c.above = 75
+    end 
     
     # on.condition(:memory_usage) do |c|
     #   c.above = 170.megabytes
